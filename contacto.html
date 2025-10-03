@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    function validarForm() {
+      let nome = document.getElementById("nome").value;
+      let tel = document.getElementById("tel").value;
+
+      if (nome === "" || tel === "") {
+        alert("Preenche todos os campos!");
+        return false;
+      }
+      if (!/^[0-9]{9}$/.test(tel)) {
+        alert("Número de telemóvel inválido!");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</head>
+<body>
+<header>
+  <h1>Contacto</h1>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="conteudos.html">Conteúdos</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="login.php">Área Reservada</a>
+  </nav>
+</header>
+
+<main>
+  <form onsubmit="return validarForm()">
+    <label>Nome Completo:</label><br>
+    <input type="text" id="nome"><br><br>
+
+    <label>Telemóvel:</label><br>
+    <input type="text" id="tel"><br><br>
+
+    <input type="submit" value="Enviar">
+  </form>
+</main>
+</body>
+</html>
