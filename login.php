@@ -10,7 +10,7 @@ if (isset($_SESSION['user'])) {
 <head>
   <meta charset="UTF-8">
   <title>Login</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 <header>
